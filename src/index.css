@@ -10,4 +10,10 @@ body {
   .btn {
     @apply bg-primary-box p-2 rounded-lg flex gap-2 text-xs text-primary;
   }
+  .field {
+    @apply border rounded-lg h-12 w-[22rem] px-4 my-3 text-xs focus:ring-1 focus:outline-none focus:ring-red-500;
+  }
+  .bar {
+    @apply w-[2.9rem] rounded-xl h-[3px] my-8 bg-green-500 border-0;
+  }
 }
