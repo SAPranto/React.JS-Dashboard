@@ -8,7 +8,7 @@ body {
   
 @layer components {
   .btn {
-    @apply bg-primary-box p-3 rounded-lg flex gap-2 text-xs text-primary;
+    @apply bg-primary-box p-3 rounded-lg flex gap-2 text-xs text-primary cursor-pointer hover:bg-gray-200;
   }
   .field {
     @apply border rounded-lg h-12 w-[22rem] px-8 mb-2 text-xs focus:ring-1 focus:outline-none focus:ring-red-500;

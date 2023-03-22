@@ -6,13 +6,19 @@ import { GiPadlock } from "react-icons/gi";
 import { RiUserSmileFill } from "react-icons/ri";
 import SingleLine from "./components/SingleLine";
 import PasswordBar from "./components/PasswordBar";
+
+import { useDispatch } from "react-redux";
+import { signUpUser } from "../redux/authSlice";
+
 const SignUp = () => {
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
 
+  const dispatch = useDispatch()
   const registerHandle = () => {
     console.table(name,email,password)
+    dispatch(signUpUser({name,email,password}))
   }
 
   return (
