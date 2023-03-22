@@ -17,6 +17,6 @@ body {
     @apply w-[2.9rem] rounded-xl h-[3px] my-8 bg-green-500 border-0;
   }
   .icon {
-    @apply text-xl text-primary-box relative top-[2.2rem] left-4;
+    @apply text-xl text-gray-300 relative top-[2.2rem] left-4;
   }
 }
