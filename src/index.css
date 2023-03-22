@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: "Inter", sans-serif;
+  }
+  
+@layer components {
+  .btn {
+    @apply bg-primary-box p-2 rounded-lg flex gap-2 text-xs text-primary;
+  }
+}
