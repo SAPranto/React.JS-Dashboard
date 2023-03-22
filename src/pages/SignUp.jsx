@@ -1,35 +1,40 @@
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
-import { RiUserSmileLine } from "react-icons/ri";
+import { FiAtSign } from "react-icons/fi";
+import { GiPadlock } from "react-icons/gi";
+import { RiUserSmileFill } from "react-icons/ri";
 import SingleLine from "./components/SingleLine";
 import PasswordBar from "./components/PasswordBar";
 const SignUp = () => {
   return (
-    <div class="flex items-center justify-center my-32 text-center">
+    <div class="flex items-center justify-center mt-20 text-center">
       <div className="">
         <h2 className="font-semibold text-lg mb-2">Getting Started</h2>
         <span className="text-primary text-sm">
           Create an account to continue
         </span>
-        <div className="flex justify-center gap-10 mt-4">
+        <div className="flex justify-center gap-6 mt-4">
           <div className="btn">
-            <FcGoogle />
+            <FcGoogle className="text-base"/>
             <span>Sign Up with Google</span>
           </div>
           <div className="btn">
-            <FaApple className="text-primary-icon" />
+            <FaApple className="text-primary-icon text-xl -mt-[4px]" />
             <span>Sign Up with Apple ID</span>
           </div>
         </div>
-        <SingleLine />
+        <SingleLine/>
         <div className="">
+          <FiAtSign className="icon"/>
           <input type="text" placeholder="Your Email" className="field" />
         </div>
         <div className="">
+        <RiUserSmileFill className="icon"/>
           <input type="text" placeholder="Your Name" className="field" />
         </div>
         <div>
+          <GiPadlock className="icon"/>
           <input type="text" placeholder="Create Password" className="field" />
         </div>
         <PasswordBar />
@@ -38,7 +43,7 @@ const SignUp = () => {
             id="default-checkbox"
             type="checkbox"
             defaultValue=""
-            className="w-4 h-4 text-primary bg-primary border-primary rounded focus:ring-blue-500"
+            className="w-4 h-4 text-primary bg-primary border-primary rounded focus:ring-blue-500 ml-1"
           />
           <label
             htmlFor="default-checkbox"
