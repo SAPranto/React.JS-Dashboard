@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { FiAtSign } from "react-icons/fi";
@@ -7,8 +7,16 @@ import { RiUserSmileFill } from "react-icons/ri";
 import SingleLine from "./components/SingleLine";
 import PasswordBar from "./components/PasswordBar";
 const SignUp = () => {
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [password, setpassword] = useState("");
+
+  const registerHandle = () => {
+    console.table(name,email,password)
+  }
+
   return (
-    <div class="flex items-center justify-center mt-20 text-center">
+    <div className="flex items-center justify-center mt-20 text-center">
       <div className="">
         <h2 className="font-semibold text-lg mb-2">Getting Started</h2>
         <span className="text-primary text-sm">
@@ -16,7 +24,7 @@ const SignUp = () => {
         </span>
         <div className="flex justify-center gap-6 mt-4">
           <div className="btn">
-            <FcGoogle className="text-base"/>
+            <FcGoogle className="text-base" />
             <span>Sign Up with Google</span>
           </div>
           <div className="btn">
@@ -24,18 +32,18 @@ const SignUp = () => {
             <span>Sign Up with Apple ID</span>
           </div>
         </div>
-        <SingleLine/>
+        <SingleLine />
         <div className="">
-          <FiAtSign className="icon"/>
-          <input type="text" placeholder="Your Email" className="field" />
+          <FiAtSign className="icon" />
+          <input type="text" placeholder="Your Email" className="field" value={email} onChange={(e) => setemail(e.target.value)} />
         </div>
         <div className="">
-        <RiUserSmileFill className="icon"/>
-          <input type="text" placeholder="Your Name" className="field" />
+          <RiUserSmileFill className="icon" />
+          <input type="text" placeholder="Your Name" className="field" value={name} onChange={(e) => setname(e.target.value)} />
         </div>
         <div>
-          <GiPadlock className="icon"/>
-          <input type="text" placeholder="Create Password" className="field" />
+          <GiPadlock className="icon" />
+          <input type="password" placeholder="Create Password" className="field" value={password} onChange={(e) => setpassword(e.target.value)}/>
         </div>
         <PasswordBar />
         <div className="flex items-center mb-4">
@@ -52,9 +60,12 @@ const SignUp = () => {
             I agree to the Terms & Conditions
           </label>
         </div>
-        <button className="bg-secondary text-white text-xs w-[22rem] h-[2.5rem] rounded-lg">Sign Up</button>
+        <button className="bg-secondary text-white text-xs w-[22rem] h-[2.5rem] rounded-lg" onClick={registerHandle}>
+          Sign Up
+        </button>
         <div className="text-xs mt-4 text-primary">
-          Already Have an account? <span className="text-blue-600 font-semibold">Sign In</span>
+          Already Have an account?{" "}
+          <span className="text-blue-600 font-semibold">Sign In</span>
         </div>
       </div>
     </div>
