@@ -8,7 +8,7 @@ const initialState = {
   error: "",
 };
 
-export const signUpUser = createAsyncThunk("signupuser", async (body) => {
+export const signUpUser = createAsyncThunk("user", async (body) => {
   const res = await fetch("", {
     method: "post",
     headers: {

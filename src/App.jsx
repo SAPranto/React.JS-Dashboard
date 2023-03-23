@@ -6,8 +6,12 @@ import SignUp from "./pages/SignUp";
 import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
 import PrivateOutlet from "./auth/PrivateOutlet";
+import {signUpUser} from "./redux/authSlice";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 
 export default function App() {
+
   return (
     <>
       <Routes>

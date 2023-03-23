@@ -6,12 +6,12 @@ const LanguageSelector = () => {
       <button
         id="dropdownDividerButton"
         data-dropdown-toggle="dropdownDivider"
-        className="text-gray-400 bg-primary-box hover:bg-gray-200 focus:ring-2 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-xs px-2 py-2.5 text-center inline-flex items-center "
+        className="text-gray-400 bg-primary-box hover:bg-gray-200 focus:ring-2 focus:outline-none focus:ring-gray-300 font-medium rounded-xl text-xs px-3 py-2.5 text-center flex"
         type="button"
       >
         English (UK)
         <svg
-          className="w-4 h-4 ml-2"
+          className="w-4 h-4 ml-6"
           aria-hidden="true"
           fill="none"
           stroke="currentColor"
