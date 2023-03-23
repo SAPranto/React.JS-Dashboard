@@ -10,6 +10,7 @@ import PasswordBar from "./components/PasswordBar";
 import { useDispatch } from "react-redux";
 import { signUpUser } from "../redux/authSlice";
 import Heading from "./components/Heading";
+import Navbar from "./components/Navbar";
 
 const SignUp = () => {
   const [name, setname] = useState("");
@@ -23,6 +24,8 @@ const SignUp = () => {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="flex items-center justify-center mt-20 text-center">
       <div className="">
         <Heading
@@ -98,6 +101,7 @@ const SignUp = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -5,11 +5,9 @@ import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Dashboard from './pages/Dashboard';
 import Users from './pages/Users';
-import Navbar from './pages/components/Navbar';
 export default function App() {
   return (
     <>
-    <Navbar/>
     <Routes>
       <Route path={'/signup'} element={<SignUp/>} />
       <Route path={'/signin'} element={<SignIn/>} />
