@@ -9,6 +9,7 @@ import Heading from "./components/Heading";
 import Navbar from "./components/Navbar";
 import { signInUser } from "../redux/authSlice";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 const SignIn = () => {
   const [email, setemail] = useState("");
@@ -83,8 +84,10 @@ const SignIn = () => {
             Sign In
           </button>
           <div className="text-xs mt-4 text-primary">
-            Don’t have an account yet?{" "}
-            <span className="text-blue-600 font-semibold">Sign Up?</span>
+            Don’t have an account yet?
+            <Link to='/signup'>
+            <span className="text-blue-600 font-semibold"> Sign Up?</span>
+            </Link>
           </div>
         </div>
       </div>

@@ -11,6 +11,7 @@ import { useDispatch } from "react-redux";
 import { signUpUser } from "../redux/authSlice";
 import Heading from "./components/Heading";
 import Navbar from "./components/Navbar";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [name, setname] = useState("");
@@ -96,8 +97,10 @@ const SignUp = () => {
           Sign Up
         </button>
         <div className="text-xs mt-4 text-primary">
-          Already Have an account?{" "}
-          <span className="text-blue-600 font-semibold">Sign In</span>
+          Already Have an account?
+          <Link to='/signin'>
+          <span className="text-blue-600 font-semibold"> Sign In</span>
+          </Link>
         </div>
       </div>
     </div>
