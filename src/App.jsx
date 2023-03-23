@@ -5,7 +5,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Dashboard from "./pages/Dashboard";
 import Users from "./pages/Users";
-import PrivateOutlet from "./pages/components/PrivateOutlet";
+import PrivateOutlet from "./auth/PrivateOutlet";
 
 export default function App() {
   return (
@@ -14,7 +14,7 @@ export default function App() {
         <Route path={"/signup"} element={<SignUp />} />
         <Route path={"/signin"} element={<SignIn />} />
         <Route path="/*" element={<PrivateOutlet />}>
-          <Route path="dashboard" element={<Dashboard/>} />
+          <Route path="" element={<Dashboard/>} />
           <Route path="users" element={<Users/>} />
         </Route>
       </Routes>

@@ -5,12 +5,12 @@ import { BsEyeFill } from "react-icons/bs";
 import { FiAtSign } from "react-icons/fi";
 import { GiPadlock } from "react-icons/gi";
 import { RiUserSmileFill } from "react-icons/ri";
-import SingleLine from "./components/SingleLine";
-import PasswordBar from "./components/PasswordBar";
+import SingleLine from "../components/SingleLine";
+import PasswordBar from "../components/PasswordBar";
 import { useDispatch } from "react-redux";
 import { signUpUser } from "../redux/authSlice";
-import Heading from "./components/Heading";
-import Navbar from "./components/Navbar";
+import Heading from "../components/Heading";
+import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
