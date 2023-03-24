@@ -38,80 +38,85 @@ const UserListPagination = () => {
   }
 
   return (
-    <div className="grid grid-cols-5 gap-4">
-      <div className="font-semibold">ID</div>
-      <div className="font-semibold">USER</div>
-      <div className="font-semibold">EMAIL</div>
-      <div className="font-semibold">OPTIONS</div>
+    <div className="">
+    <div className="grid grid-cols-5 gap-5">
+      <div className="font-semibold text-slate-500 text-xs ">#ID</div>
+      <div className="font-semibold text-slate-500 text-xs">USER</div>
+      <div className="font-semibold text-slate-500 text-xs">EMAIL</div>
+      <div className="font-semibold text-slate-500 text-xs">OPTIONS</div>
       <div />
+      <div className="absolute bg-slate-50 w-[35rem] h-10 -z-10 rounded-xl left-[250px] top-[132px]">
+
+      </div>
       {users.map((user) => (
         <React.Fragment key={user.id}>
-          <div>{user.id}</div>
+          <div className="text-slate-500 mt-4">{user.id}</div>
           <div className="flex items-center">
             <img
               src={user.avatar}
               alt=""
-              width={40}
+              width={45}
               className="rounded-xl mr-2"
-            />
+              />
             <div>
-              <div>
+              <div className="text-slate-500 font-semibold text-xs mt-1">
                 {user.first_name} {user.last_name}
               </div>
             </div>
           </div>
-          <div>{user.email}</div>
-          <BsThreeDots className="cursor-pointer text-primary-text" />
+          <div className="text-slate-500 font-semibold text-xs mt-4">{user.email}</div>
+          <BsThreeDots className="cursor-pointer text-primary-text mt-4" />
           <div />
         </React.Fragment>
       ))}
 
-      <div className="flex col-span-5 mt-4 gap-2">
+      <div className="flex col-span-5 mt-8 gap-2">
         <button
           onClick={handlePreviousPage}
           disabled={page === 1}
           className="px-2 h-8 border text-sm text-black rounded-md"
-        >
+          >
           <MdOutlineKeyboardDoubleArrowLeft/>
         </button>
         <button
           onClick={handlePreviousPage}
           disabled={page === 1}
           className="px-2 h-8 border text-sm text-black rounded-md"
-        >
+          >
           <MdOutlineKeyboardArrowLeft/>
         </button>
         <button
           onClick={handlePreviousPage}
           disabled={page === 1}
           className="px-3 h-8 border text-sm text-black rounded-md disabled:bg-blue-500 disabled:text-white"
-        >
+          >
           1
         </button>
         <button
           onClick={handleNextPage}
           disabled={page === totalPages}
           className="px-3 h-8 border text-sm text-black rounded-md disabled:bg-blue-500 disabled:text-white"
-        >
+          >
           2
         </button>
         <button
           onClick={handleNextPage}
           disabled={page === totalPages}
           className="px-2 h-8 border text-sm text-black rounded-md"
-        >
+          >
           <MdOutlineKeyboardArrowRight/>
         </button>
         <button
           onClick={handleNextPage}
           disabled={page === totalPages}
           className="px-2 h-8 border text-sm text-black rounded-md"
-        >
+          >
           <MdOutlineKeyboardDoubleArrowRight/>
         </button>
 
       </div>
     </div>
+          </div>
   );
 };
 
