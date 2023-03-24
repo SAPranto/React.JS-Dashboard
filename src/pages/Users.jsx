@@ -49,7 +49,7 @@ const Users = () => {
       </div>
       <div>
       <Search/>
-      <div>
+      <div className='ml-8'>
       <h1 className='my-6 font-semibold'>Users List</h1>
       <UserListPagination />
     </div>

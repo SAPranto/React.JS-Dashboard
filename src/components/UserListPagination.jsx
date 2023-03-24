@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BsThreeDots } from "react-icons/bs";
+import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
 
 const UserListPagination = () => {
   const [users, setUsers] = useState([]);
@@ -65,21 +66,36 @@ const UserListPagination = () => {
         </React.Fragment>
       ))}
 
-      <div className="flex justify-between col-span-5 mt-4">
+      <div className="flex col-span-5 mt-4 gap-2">
         <button
           onClick={handlePreviousPage}
           disabled={page === 1}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md disabled:bg-gray-300 disabled:text-gray-500"
+          className="px-2 h-8 border text-sm text-black rounded-md cursor-pointer"
         >
-          Previous Page
+          <MdOutlineKeyboardArrowLeft/>
+        </button>
+        <button
+          onClick={handlePreviousPage}
+          disabled={page === 1}
+          className="px-3 h-8 border text-sm text-black rounded-md disabled:bg-blue-500 disabled:text-white"
+        >
+          1
         </button>
         <button
           onClick={handleNextPage}
           disabled={page === totalPages}
-          className="px-4 py-2 bg-blue-500 text-white rounded-md disabled:bg-gray-300 disabled:text-gray-500"
+          className="px-3 h-8 border text-sm text-black rounded-md disabled:bg-blue-500 disabled:text-white"
         >
-          Next Page
+          2
         </button>
+        <button
+          onClick={handleNextPage}
+          disabled={page === totalPages}
+          className="px-2 h-8 border text-sm text-black rounded-md cursor-pointer"
+        >
+          <MdOutlineKeyboardArrowRight/>
+        </button>
+
       </div>
     </div>
   );
