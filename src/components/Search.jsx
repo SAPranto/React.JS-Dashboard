@@ -17,9 +17,9 @@ const Search = () => {
           />
           <button
             type="button"
-            className="absolute inset-y-0 right-0 flex items-center pr-3"
+            className="relative left-[350px] top-[-28px] flex items-center "
           >
-            <BsSearch className="] text-primary-text" />
+            <BsSearch className="text-primary-text" />
           </button>
         </div>
       </form>

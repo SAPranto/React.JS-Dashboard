@@ -32,7 +32,7 @@ const Users = () => {
   );
 
   return (
-    <div className=''>
+    <div className='container'>
     <div className='flex'>
       <div className="container pt-4 border-r w-56 h-screen px-4 mx-2">
         <img src="./logo.png" alt="" width={120} className="mx-2" />
