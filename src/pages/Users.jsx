@@ -4,6 +4,7 @@ import { HiOutlineUser } from 'react-icons/hi';
 import { TbReportAnalytics } from 'react-icons/tb';
 import { Link } from 'react-router-dom';
 import Search from '../components/Search'
+import UserListPagination from '../components/UserListPagination';
 
 const Users = () => {
   const [activeIndex, setActiveIndex] = useState(1);
@@ -31,6 +32,7 @@ const Users = () => {
   );
 
   return (
+    <div className=''>
     <div className='flex'>
       <div className="container pt-4 border-r w-56 h-screen px-4 mx-2">
         <img src="./logo.png" alt="" width={120} className="mx-2" />
@@ -47,7 +49,13 @@ const Users = () => {
       </div>
       <div>
       <Search/>
+      <div>
+      <h1 className='my-6 font-semibold'>Users List</h1>
+      <UserListPagination />
+    </div>
       </div>
+    </div>
+
     </div>
   )
 }
