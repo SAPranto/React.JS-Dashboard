@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { BsThreeDots } from "react-icons/bs";
-import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from "react-icons/md";
+import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft, MdOutlineKeyboardDoubleArrowLeft, MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 const UserListPagination = () => {
   const [users, setUsers] = useState([]);
@@ -70,7 +70,14 @@ const UserListPagination = () => {
         <button
           onClick={handlePreviousPage}
           disabled={page === 1}
-          className="px-2 h-8 border text-sm text-black rounded-md cursor-pointer"
+          className="px-2 h-8 border text-sm text-black rounded-md"
+        >
+          <MdOutlineKeyboardDoubleArrowLeft/>
+        </button>
+        <button
+          onClick={handlePreviousPage}
+          disabled={page === 1}
+          className="px-2 h-8 border text-sm text-black rounded-md"
         >
           <MdOutlineKeyboardArrowLeft/>
         </button>
@@ -91,9 +98,16 @@ const UserListPagination = () => {
         <button
           onClick={handleNextPage}
           disabled={page === totalPages}
-          className="px-2 h-8 border text-sm text-black rounded-md cursor-pointer"
+          className="px-2 h-8 border text-sm text-black rounded-md"
         >
           <MdOutlineKeyboardArrowRight/>
+        </button>
+        <button
+          onClick={handleNextPage}
+          disabled={page === totalPages}
+          className="px-2 h-8 border text-sm text-black rounded-md"
+        >
+          <MdOutlineKeyboardDoubleArrowRight/>
         </button>
 
       </div>
